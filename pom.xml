@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.codecentric</groupId>
+	<artifactId>springdata-mongodb-examples</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Spring Data MongoDB Examples</name>
+	<url>https://github.com/ttrelle/spring-data-examples/tree/master/tdd-junit</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.12</junit.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/misc/java</directory>
+				<targetPath>test-classes</targetPath>
+			</resource>
+			<resource>
+				<directory>src/misc/resources</directory>
+				<targetPath>test-classes</targetPath>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<organization>
+		<name>codecentric AG</name>
+		<url>http://www.codecentric.de</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>Tobias Trelle</name>
+			<email>tobias.trelle@codecentric.de</email>
+		</developer>
+	</developers>
+
+</project>
