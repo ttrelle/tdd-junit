@@ -3,16 +3,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.codecentric</groupId>
-	<artifactId>springdata-mongodb-examples</artifactId>
+	<artifactId>tdd-junit-examples</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>Spring Data MongoDB Examples</name>
-	<url>https://github.com/ttrelle/spring-data-examples/tree/master/tdd-junit</url>
+	<name>TDD JUnit/Mockito Examples</name>
+	<url>https://github.com/ttrelle/tdd-junit/tree/master</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.version>4.12</junit.version>
+		<mockito.version>2.5.4</mockito.version>
 	</properties>
 
 	<dependencies>
@@ -21,6 +22,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
 			<scope>test</scope>
 		</dependency>
 
