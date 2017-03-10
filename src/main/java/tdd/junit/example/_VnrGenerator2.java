@@ -3,7 +3,13 @@ package tdd.junit.example;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class _VnrGenerator {
+public class _VnrGenerator2 {
+
+	private _VnrDao dao;
+
+	public _VnrGenerator2(_VnrDao dao) {
+		this.dao = dao;
+	}
 
 	public String neueVnr(String sachgebiet, LocalDate stichtag, String nachname) {
 		final String sgDatum = //
@@ -17,7 +23,7 @@ public class _VnrGenerator {
 	}
 	
 	private int ermittleLaufnummerZu(LocalDate stichtag, String ersterBuchstabe) {
-		return 1;
+		return dao.naechsteFreiLaufnummer(stichtag, ersterBuchstabe);
 	}
 
 }
