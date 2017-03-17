@@ -5,9 +5,9 @@ import java.time.format.DateTimeFormatter;
 
 public class _VnrGenerator2 {
 
-	private _VnrDao dao;
+	private VnrDao dao;
 
-	public _VnrGenerator2(_VnrDao dao) {
+	public _VnrGenerator2(VnrDao dao) {
 		this.dao = dao;
 	}
 

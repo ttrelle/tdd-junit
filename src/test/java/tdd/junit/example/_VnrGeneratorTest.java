@@ -40,7 +40,7 @@ public class _VnrGeneratorTest {
 		String vnr = generator.neueVnr(sachgebiet, stichtag, name);
 		
 		// dann
-		assertThat(vnr, is("PH-20170328-R-001"));
+		assertThat(vnr, is("PH-2017-02-17-R001"));
 	}
 	
 }
