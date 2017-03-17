@@ -34,14 +34,14 @@ public class _VnrGenerator2Test {
 		// gegeben sei
 		String sachgebiet = "LN";
 		String name = "Fasel";
-		given(dao.naechsteFreiLaufnummer(stichtag, "F")).willReturn(1);
+		given(dao.naechsteFreiLaufnummer(sachgebiet, name)).willReturn(1);
 		
 		// wenn
 		String vnr = generator.neueVnr(sachgebiet, stichtag, name);
 		
 		// dann
 		assertThat(vnr, is("LN-2017-02-17-F001"));
-		then(dao).should().naechsteFreiLaufnummer(stichtag, "F");
+		then(dao).should().naechsteFreiLaufnummer(sachgebiet, name);
 		then(dao).shouldHaveNoMoreInteractions();
 	}
 }

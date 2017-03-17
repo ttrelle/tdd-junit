@@ -1,7 +1,5 @@
 package tdd.junit.example;
 
-import java.time.LocalDate;
-
 public interface VnrDao {
-	int naechsteFreiLaufnummer(LocalDate stichtag, String buchstabe);
+	int naechsteFreiLaufnummer(String sg, String buchstabe);
 }
