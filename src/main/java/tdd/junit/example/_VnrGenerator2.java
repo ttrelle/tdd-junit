@@ -19,7 +19,7 @@ public class _VnrGenerator2 {
 	}
 	
 	private int ermittleLaufnummerZu(String sg, String name) {
-		return dao.naechsteFreiLaufnummer(sg, name);
+		return dao.naechsteFreieLaufnummer(sg, name);
 	}
 
 }
