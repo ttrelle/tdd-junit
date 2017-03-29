@@ -2,6 +2,8 @@ package tdd.junit.example;
 
 import java.time.LocalDate;
 
+import tdd.junit.VnrDao;
+
 public class _VnrGenerator2 {
 
 	private VnrDao dao;

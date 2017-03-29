@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import tdd.junit.example.VnrDao;
+import tdd.junit.VnrDao;
 import tdd.junit.example._VnrGenerator2;
 
 @RunWith(MockitoJUnitRunner.class)
