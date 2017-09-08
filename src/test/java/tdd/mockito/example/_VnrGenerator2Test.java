@@ -9,18 +9,21 @@ import java.time.LocalDate;
 import java.time.Month;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnit;
+import org.mockito.junit.MockitoRule;
 
 import tdd.junit.VnrDao;
 import tdd.junit.example._VnrGenerator2;
 
-@RunWith(MockitoJUnitRunner.class)
 public class _VnrGenerator2Test {
+	
 	private _VnrGenerator2 generator; /** Unit under test. */
 	private LocalDate stichtag;
+	
+	@Rule public MockitoRule mockRule = MockitoJUnit.rule();	
 	
 	@Mock private VnrDao dao;
 	
