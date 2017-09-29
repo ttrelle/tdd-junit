@@ -1,7 +1,7 @@
 package tdd.mockito.example;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.BDDMockito.then;
 
@@ -21,13 +21,12 @@ import tdd.junit.example._VnrGenerator2;
 public class _VnrGenerator2Test {
 	
 	private _VnrGenerator2 generator; /** Unit under test. */
-	private LocalDate stichtag;
 
-	@Test public void vnr_erzeugung(@Mock VnrDao dao) {
-		
+	@Test 
+	void vnr_erzeugung(@Mock VnrDao dao) {		
 		// gegeben sei
 		generator = new _VnrGenerator2(dao);
-		stichtag = LocalDate.of(2017, Month.FEBRUARY, 17);
+		LocalDate stichtag = LocalDate.of(2017, Month.FEBRUARY, 17);
 		String sachgebiet = "LN";
 		String name = "Fasel";
 		given(dao.naechsteFreieLaufnummer(sachgebiet, name)).willReturn(1);
