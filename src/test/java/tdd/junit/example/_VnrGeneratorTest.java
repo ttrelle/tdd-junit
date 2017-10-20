@@ -8,6 +8,8 @@ import java.time.Month;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 public class _VnrGeneratorTest {
 	private _VnrGenerator generator; /** Unit under test. */
@@ -42,5 +44,16 @@ public class _VnrGeneratorTest {
 		// dann
 		assertThat(vnr, is("PH-2017-02-17-R001"));
 	}
+	
+	
+	@ParameterizedTest(name="vnr_{index}: {0}")
+	@CsvFileSource(resources = "/vnrs.csv")
+	void vnrs(String soll, String sachgebiet, LocalDate stichtag, String name) {
+		// wenn
+		String vnr = generator.neueVnr(sachgebiet, stichtag, name);
+
+		// dann
+		assertThat(vnr, is(soll));	
+	}	
 	
 }

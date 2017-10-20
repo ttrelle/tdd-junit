@@ -1,0 +1,21 @@
+before
+@BeforeEach void setUp() {
+	${:import(org.junit.jupiter.api.BeforeEach)}${cursor}
+}
+
+csv
+@CsvFileSource(resources = "${cursor}.csv")${:import(org.junit.jupiter.api.params.CsvFileSource)}
+
+pt
+@ParameterizedTest(name="${cursor}_{index}: ")${:import(org.junit.jupiter.api.params.ParameterizedTest)}
+
+test
+${:import(org.junit.jupiter.api.Test)}@Test void ${testName}() {
+	// gegeben sei
+	${cursor}
+
+	// wenn
+
+	// dann
+	
+}
