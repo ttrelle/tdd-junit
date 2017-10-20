@@ -4,10 +4,10 @@ before
 }
 
 csv
-@CsvFileSource(resources = "${cursor}.csv")${:import(org.junit.jupiter.api.params.CsvFileSource)}
+@CsvFileSource(resources = "${cursor}.csv")${:import(org.junit.jupiter.params.provider.CsvFileSource)}
 
 pt
-@ParameterizedTest(name="${cursor}_{index}: ")${:import(org.junit.jupiter.api.params.ParameterizedTest)}
+@ParameterizedTest(name="${cursor}_{index}: ")${:import(org.junit.jupiter.params.ParameterizedTest)}
 
 test
 ${:import(org.junit.jupiter.api.Test)}@Test void ${testName}() {
@@ -19,3 +19,6 @@ ${:import(org.junit.jupiter.api.Test)}@Test void ${testName}() {
 	// dann
 	
 }
+
+ext
+@ExtendWith(${cursor})${:import(org.junit.jupiter.api.extension.ExtendWith)}
